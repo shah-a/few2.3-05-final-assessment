@@ -22,8 +22,8 @@ function Form({ id, setId, setData }) {
             type="number"
             min="1"
             max="83"
-            value={id}
-            onChange={(e) => setId(parseInt(e.target.value, 10))}
+            value={id || 1}
+            onChange={(e) => setId(parseInt(e.target.value, 10) || 1)}
           />
         </label>
         <button type="submit">Submit</button>
