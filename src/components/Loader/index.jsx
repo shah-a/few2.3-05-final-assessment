@@ -1,3 +1,4 @@
+import './Loader.css';
 import dots from './three-dots.svg';
 
 function Loader() {
