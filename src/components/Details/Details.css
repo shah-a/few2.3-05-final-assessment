@@ -1,0 +1,15 @@
+.Details {
+  margin: 1rem auto;
+  width: fit-content;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Details p {
+  margin: 0 0 0.5rem;
+}
+
+.Details ul {
+  margin: 0;
+  list-style-type: '🎬';
+}
