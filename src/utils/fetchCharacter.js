@@ -12,8 +12,12 @@ const fetchCharacter = async (id) => {
   const [homeworld, err] = await fetchByUrl(data.homeworld);
   if (err) return [null, new Error(err)];
 
-  // Mutates data's homeworld url with homeworld details
+  const filmsRes = await Promise.all(data.films.map((film) => fetch(film)));
+  const filmsData = await Promise.all(filmsRes.map((filmRes) => filmRes.json()));
+
+  // Mutates data's `homeworld` & `films` urls with resolved data
   data.homeworld = homeworld;
+  data.films = filmsData;
 
   return [data, null];
 };
