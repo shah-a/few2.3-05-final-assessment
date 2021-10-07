@@ -9,6 +9,7 @@
     "deploy:clean": "gh-pages-clean && npm run deploy"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
