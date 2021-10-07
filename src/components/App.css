@@ -1,0 +1,10 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App > * {
+  width: 80%;
+  max-width: 72rem;
+}
