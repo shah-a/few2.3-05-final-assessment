@@ -13,7 +13,7 @@ function StarWars() {
     <div className="StarWars container">
       <section>
         <Form id={id} setId={setId} setData={setData} />
-        <Display list={list} setList={setList} data={data} />
+        {data && <Display list={list} setList={setList} data={data} />}
       </section>
       <section>
         <List list={list} />
