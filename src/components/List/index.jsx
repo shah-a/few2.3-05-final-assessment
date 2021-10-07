@@ -10,7 +10,9 @@ function List({ list }) {
   return (
     <div className="List">
       {list.length > 0 && <h3>Character List</h3>}
-      {characterList}
+      <div className="card">
+        {characterList}
+      </div>
     </div>
   );
 }

@@ -4,3 +4,17 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+.List h1 {
+  margin: 0;
+}
+
+.List .card > * {
+  margin: 2rem;
+  padding: 1rem 0;
+  border-radius: 0.25rem;
+}
+
+.List .card > :nth-child(odd) {
+  background-color: #ffffff11;
+}
