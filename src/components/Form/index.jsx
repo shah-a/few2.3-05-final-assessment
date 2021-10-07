@@ -17,8 +17,8 @@ function Form({ id, setId, setData }) {
           return setData(res);
         }}
       >
-        <label>
-          <h3>Enter SWAPI Character ID:</h3>
+        <h3>Enter SWAPI Character ID:</h3>
+        <div className="input">
           <input
             type="number"
             min="1"
@@ -26,8 +26,8 @@ function Form({ id, setId, setData }) {
             value={id || 1}
             onChange={(e) => setId(parseInt(e.target.value, 10) || 1)}
           />
-        </label>
-        <button type="submit">Submit</button>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
   );

@@ -12,3 +12,20 @@
   width: fit-content;
   text-align: left;
 }
+
+.Display button {
+  padding: 0.33rem 1.5rem;
+  color: var(--dark);
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 1px solid var(--dark);
+  border-radius: 0.125rem;
+  background-color: var(--light);
+  transition: all 150ms;
+}
+
+.Display button:hover {
+  color: var(--light);
+  background-color: var(--red);
+}

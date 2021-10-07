@@ -4,3 +4,36 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+.Form .input {
+  display: flex;
+  justify-content: center;
+}
+
+.Form input {
+  padding: 0.25rem 0.5rem;
+  color: var(--dark);
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px solid var(--dark);
+  border-radius: 0.125rem 0 0 0.125rem;
+}
+
+.Form button {
+  padding: 0.25rem 0.5rem;
+  color: var(--dark);
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 1px solid var(--dark);
+  border-radius: 0 0.125rem 0.125rem 0;
+  background-color: var(--light);
+  transition: all 150ms;
+}
+
+.Form button:hover {
+  color: var(--light);
+  background-color: var(--red);
+}
