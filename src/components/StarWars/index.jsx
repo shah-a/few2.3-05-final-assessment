@@ -10,7 +10,7 @@ function StarWars() {
   const [data, setData] = useState(null);
 
   return (
-    <div className="StarWars">
+    <div className="StarWars container">
       <section>
         <Form id={id} setId={setId} setData={setData} />
         <Display list={list} setList={setList} data={data} />
