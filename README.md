@@ -1,8 +1,5 @@
 # FEW 2.3: Final Assessment
 
-Dev start start script: `$ npm run dev`
+## Acknowledgements:
 
-## Notes to self
-
-TODO:
-- [x] Fix duplicate list entries on "save" click
+Darth Vader image by [DAN1637IEL](https://www.deviantart.com/dan1637iel/art/Darth-Vader-Minimalistic-Poster-713434858)

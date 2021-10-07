@@ -13,6 +13,11 @@
   flex-direction: column;
   background-color: var(--dark);
   color: var(--light);
+  background-image: url('../assets/darth-vader.png');
+  background-size: 40vh;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-attachment: fixed;
 }
 
 .App .container {
