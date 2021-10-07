@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { uniqBy } from 'lodash/array';
 import './StarWars.css';
 import Form from '../Form';
 import Display from '../Display';
@@ -15,17 +14,6 @@ function StarWars() {
       <section>
         <Form id={id} setId={setId} setData={setData} />
         <Display list={list} setList={setList} data={data} />
-        {data && (
-          <button
-            type="button"
-            onClick={() => {
-              const newList = uniqBy([...list, data], 'name');
-              setList(newList);
-            }}
-          >
-            Save
-          </button>
-        )}
       </section>
       <section>
         <List list={list} />

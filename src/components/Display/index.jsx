@@ -1,4 +1,6 @@
-function Display({ data }) {
+import { uniqBy } from 'lodash/array';
+
+function Display({ list, setList, data }) {
   return (
     <div className="Display">
       <h1>{data && data.name}</h1>
@@ -6,6 +8,17 @@ function Display({ data }) {
       <h2>{data && `Mass: ${data.mass}`}</h2>
       <h2>{data && `Hair Colour: ${data.hair_color}`}</h2>
       <h2>{data && `Eye Colour: ${data.eye_color}`}</h2>
+      {data && (
+        <button
+          type="button"
+          onClick={() => {
+            const newList = uniqBy([...list, data], 'name');
+            setList(newList);
+          }}
+        >
+          Save
+        </button>
+      )}
     </div>
   );
 }
