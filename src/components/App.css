@@ -7,4 +7,5 @@
 .App > * {
   width: 80%;
   max-width: 72rem;
+  margin: 0 auto;
 }
