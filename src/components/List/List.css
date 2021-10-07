@@ -1,0 +1,6 @@
+.List h3 {
+  background-image: linear-gradient(90deg, var(--light), var(--blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

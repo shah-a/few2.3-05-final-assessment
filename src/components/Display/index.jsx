@@ -1,4 +1,5 @@
 import { uniqBy } from 'lodash/array';
+import './Display.css';
 
 function Display({ list, setList, data }) {
   return (

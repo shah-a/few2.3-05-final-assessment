@@ -10,8 +10,5 @@
 }
 
 .Home h1 {
-  background-image: linear-gradient(90deg, var(--red), var(--orange));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--red);
 }

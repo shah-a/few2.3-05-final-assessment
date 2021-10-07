@@ -1,3 +1,5 @@
+import './List.css';
+
 function List({ list }) {
   const characterList = list.map((character) => (
     <div key={character.name}>

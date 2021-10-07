@@ -1,3 +1,4 @@
+import './Form.css';
 import fetchCharacter from '../../utils/fetchCharacter';
 
 function Form({ id, setId, setData }) {
