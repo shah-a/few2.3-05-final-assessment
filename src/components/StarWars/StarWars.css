@@ -1,0 +1,19 @@
+.StarWars {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.StarWars section {
+  width: 100%;
+}
+
+.StarWars > :nth-child(1) {
+  background: limegreen;
+  margin-right: 2rem;
+}
+
+.StarWars > :nth-child(2) {
+  background: skyblue;
+  margin-left: 2rem;
+}
