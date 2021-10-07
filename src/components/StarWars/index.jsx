@@ -1,14 +1,19 @@
 import { useState } from 'react';
+import { fetchCharacter } from '../../functions';
 
 function StarWars() {
-  const [id, setId] = useState('');
+  const [id, setId] = useState(1);
+  const [name, setName] = useState(null);
 
   return (
     <div className="StarWars">
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          console.log('Submitted: ', id);
+          if (id === 17) return alert('17 is invalid. Sorry!');
+          const [data, err] = await fetchCharacter(id);
+          if (err) return alert(err);
+          return setName(data.name);
         }}
       >
         <input
@@ -16,10 +21,11 @@ function StarWars() {
           min="1"
           max="83"
           value={id}
-          onChange={(e) => setId(e.target.value)}
+          onChange={(e) => setId(parseInt(e.target.value, 10))}
         />
         <button type="submit">Submit</button>
       </form>
+      <h1>{name}</h1>
     </div>
   );
 }
