@@ -1,4 +1,4 @@
-import { handleSubmit } from '../../functions';
+import fetchCharacter from '../../utils/fetchCharacter';
 
 function Form({ id, setId, setData }) {
   return (
@@ -6,7 +6,14 @@ function Form({ id, setId, setData }) {
       <form
         onSubmit={async (e) => {
           e.preventDefault();
-          handleSubmit(id, setData);
+          if (id === 17) {
+            return alert('17 is invalid. Sorry!');
+          }
+          const [res, err] = await fetchCharacter(id);
+          if (err) {
+            return alert(err);
+          }
+          return setData(res);
         }}
       >
         <label>

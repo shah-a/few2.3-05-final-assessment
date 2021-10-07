@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './StarWars.css';
 import Form from '../Form';
 import Display from '../Display';
@@ -9,6 +9,12 @@ function StarWars() {
   const [list, setList] = useState([]);
   const [data, setData] = useState(null);
 
+  // useEffect for filtering duplicates out of`list`
+  // `list` each time it changes:
+  useEffect(() => {
+    setList([...new Set(list)]);
+  }, [list]);
+
   return (
     <div className="StarWars">
       <section>
@@ -16,7 +22,7 @@ function StarWars() {
         <Display list={list} setList={setList} data={data} />
       </section>
       <section>
-        <List />
+        <List list={list} />
       </section>
     </div>
   );
