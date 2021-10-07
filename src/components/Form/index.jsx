@@ -1,19 +1,27 @@
 import './Form.css';
 import fetchCharacter from '../../utils/fetchCharacter';
 
-function Form({ id, setId, setData }) {
+// eslint-disable-next-line object-curly-newline
+function Form({ id, setId, setData, setLoading }) {
   return (
     <div className="Form">
       <form
         onSubmit={async (e) => {
           e.preventDefault();
+          setLoading(true);
+
           if (id === 17) {
+            setLoading(false);
             return alert('17 is invalid. Sorry!');
           }
+
           const [res, err] = await fetchCharacter(id);
           if (err) {
+            setLoading(false);
             return alert(err);
           }
+
+          setLoading(false);
           return setData(res);
         }}
       >
