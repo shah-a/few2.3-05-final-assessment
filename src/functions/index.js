@@ -1,3 +1,3 @@
-import fetchCharacter from './fetchCharacter';
+import { handleSubmit, handleSave } from './handlers';
 
-export { fetchCharacter };
+export { handleSubmit, handleSave };
